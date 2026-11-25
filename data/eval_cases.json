@@ -1,0 +1,39 @@
+[
+  {
+    "case_id": "EVAL-01",
+    "description": "Suspek Sindrom Koroner Akut dengan hemodinamik masih stabil",
+    "input": {
+      "age": 58,
+      "gender": "L",
+      "chief_complaint": "Nyeri dada seperti ditekan beban berat menjalar ke rahang, keringat dingin",
+      "vitals": { "systolic_bp": 145, "diastolic_bp": 90, "heart_rate": 104, "spo2": 95 }
+    },
+    "expected_min_triage": "HIGH_URGENCY",
+    "expected_sop": "SOP-IGD-01"
+  },
+  {
+    "case_id": "EVAL-02",
+    "description": "Syok septik / DBD berat dengan hipotensi",
+    "input": {
+      "age": 22,
+      "gender": "P",
+      "chief_complaint": "Demam hari ke-4, lemas, ujung jari dingin, gusi berdarah",
+      "vitals": { "systolic_bp": 82, "diastolic_bp": 50, "heart_rate": 134, "temperature_c": 38.9, "spo2": 94 }
+    },
+    "expected_min_triage": "EMERGENCY",
+    "expected_sop": "SOP-IGD-02"
+  },
+  {
+    "case_id": "EVAL-03",
+    "description": "Kontrol rawat jalan stabil peserta BPJS tanpa rujukan",
+    "input": {
+      "age": 35,
+      "gender": "L",
+      "chief_complaint": "Batuk pilek ringan 2 hari tanpa sesak",
+      "vitals": { "systolic_bp": 118, "diastolic_bp": 78, "heart_rate": 80, "temperature_c": 37.2, "spo2": 99 },
+      "admin_info": { "payment_type": "BPJS", "has_fk1_referral": false }
+    },
+    "expected_min_triage": "STANDARD",
+    "expected_sop": "SOP-RJ-03"
+  }
+]
